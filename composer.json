@@ -1,0 +1,48 @@
+{
+    "name": "gnarhard/zipper",
+    "description": ":package_description",
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Grayson Erhard",
+            "email": "gcerhard@gmail.com",
+            "homepage": "https://gnarhard.com"
+        }
+    ],
+    "homepage": "https://github.com/gnarhard/zipper",
+    "keywords": ["Laravel", "Zipper"],
+    "require": {
+        "illuminate/support": "^11"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.34",
+        "orchestra/testbench": "^9.2",
+        "pestphp/pest-plugin-laravel": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gnarhard\\Zipper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gnarhard\\Zipper\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gnarhard\\Zipper\\ZipperServiceProvider"
+            ],
+            "aliases": {
+                "Zipper": "Gnarhard\\Zipper\\Facades\\Zipper"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
