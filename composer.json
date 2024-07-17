@@ -1,6 +1,6 @@
 {
     "name": "gnarhard/zipper",
-    "description": ":package_description",
+    "description": "A simple Laravel package for working with zip files.",
     "license": "MIT",
     "version": "0.0.1",
     "authors": [
