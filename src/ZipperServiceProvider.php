@@ -31,12 +31,10 @@ class ZipperServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/zipper.php', 'zipper');
+        // $this->mergeConfigFrom(__DIR__.'/../config/zipper.php', 'zipper');
 
         // Register the service the package provides.
-        $this->app->singleton('zipper', function ($app) {
-            return new Zipper;
-        });
+        $this->app->singleton('zipper', fn ($app) => new Zipper);
     }
 
     /**
@@ -57,9 +55,9 @@ class ZipperServiceProvider extends ServiceProvider
     protected function bootForConsole(): void
     {
         // Publishing the configuration file.
-        $this->publishes([
-            __DIR__.'/../config/zipper.php' => config_path('zipper.php'),
-        ], 'zipper.config');
+        // $this->publishes([
+        //     __DIR__.'/../config/zipper.php' => config_path('zipper.php'),
+        // ], 'zipper.config');
 
         // Publishing the views.
         /*$this->publishes([
