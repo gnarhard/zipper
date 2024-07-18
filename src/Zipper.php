@@ -33,7 +33,7 @@ class Zipper
 
         // Add directories to the ZIP file
         foreach ($directories as $dir) {
-            $zip->addEmptyDir($dir);
+            $zip->addEmptyDir(str_replace($source, '', $dir));
         }
 
         // Add files to the ZIP file
