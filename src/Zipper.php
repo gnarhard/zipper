@@ -31,11 +31,6 @@ class Zipper
             return false;
         }
 
-        // Add directories to the ZIP file
-        foreach ($directories as $dir) {
-            $zip->addEmptyDir(str_replace($source, '', $dir));
-        }
-
         // Add files to the ZIP file
         foreach ($files as $file) {
             if (strpos($file, '.DS_Store') !== false) {
@@ -44,6 +39,7 @@ class Zipper
 
             $fileContent = Storage::disk($disk)->get($file);
             $relativePath = str_replace($source, '', $file);
+            $relativePath = ltrim($relativePath, '/'); // remove leading slash
             $zip->addFromString($relativePath, $fileContent);
         }
 

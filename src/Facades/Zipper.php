@@ -4,6 +4,9 @@ namespace Gnarhard\Zipper\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * @see Gnarhard\Zipper\Zipper
+ */
 class Zipper extends Facade
 {
     /**
