@@ -13,12 +13,12 @@
     "homepage": "https://github.com/gnarhard/zipper",
     "keywords": ["Laravel", "Zipper"],
     "require": {
-        "illuminate/support": "^11"
+        "illuminate/support": "^12"
     },
     "require-dev": {
-        "pestphp/pest": "^2.34",
-        "orchestra/testbench": "^9.2",
-        "pestphp/pest-plugin-laravel": "^2.4"
+        "pestphp/pest": "^4.0",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
     },
     "autoload": {
         "psr-4": {
